@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Asha Workshop Registration</title>
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .form-container {
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 16px;
+      border: 2px solid #e4def3;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h2 {
+      color: #6c2eb9;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f9f9fb;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.8rem;
+      width: 100%;
+      padding: 12px;
+      background-color: #6c2eb9;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #5822a8;
+    }
+
+    .note {
+      margin-top: 1.5rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Asha Chatbot Workshop Registration</h2>
+    <form action="../Asha/forms.html" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" pattern="[0-9]{10}" required />
+
+      <label for="profession">Profession</label>
+      <input type="text" id="profession" placeholder="e.g., Student, Developer, Teacher" required />
+
+      <label for="interest">Why are you interested in this workshop?</label>
+      <textarea id="interest" rows="4" required></textarea>
+
+      <label for="session">Select Session</label>
+      <select id="session" required>
+        <option value="" disabled selected>Select a time slot</option>
+        <option value="morning">Morning Session (10 AM - 12 PM)</option>
+        <option value="afternoon">Afternoon Session (2 PM - 4 PM)</option>
+        <option value="evening">Evening Session (5 PM - 7 PM)</option>
+      </select>
+
+      <button type="submit">Register for Workshop</button>
+    </form>
+    <p class="note">We will contact you via email with further details.</p>
+    <p class="note">
+      <a href="index.html" style="color: #6c2eb9; text-decoration: none;">Back to Asha</a>
+    </p>
+  </div>
+</body>
+</html>
